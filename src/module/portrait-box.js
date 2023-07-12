@@ -83,6 +83,7 @@ export class PortraitBox extends Application {
         this.settings.background = getSetting("background");
         this.settings.backgroundFilter = getSetting("backgroundFilter");
         this.settings.imageFilter = getSetting("imageFilter");
+        this.settings.animationEnabled = getSetting("animationEnabled");
     }
 
     #initCssVariables() {
@@ -107,6 +108,8 @@ export class PortraitBox extends Application {
     }
 
     show = token => {
+        console.log(getSetting("animationEnabled"));
+
         if (!this.shouldShown(token))
             return;
 
@@ -133,7 +136,7 @@ export class PortraitBox extends Application {
 
         this.element.attr("class", CONST.ANCHOR_CLASSES[this.settings.anchor]);
 
-        if (this.settings.animationDuration !== "" && this.animationEnabled) {
+        if (this.settings.animationDuration !== "" && this.settings.animationEnabled) {
             this.element.css("--animate-duration", this.settings.animationDuration);
         }else{
             this.element.css("--animate-duration", 0);
@@ -152,14 +155,14 @@ export class PortraitBox extends Application {
 
         this.element.attr("class", CONST.ANCHOR_CLASSES[this.settings.anchor])
 
-        if (this.settings.outAnimationDuration !== "" && this.animationEnabled) {
+        if (this.settings.outAnimationDuration !== "" && getSetting("animationEnabled") == false) {
             this.element.css("--animate-duration", this.settings.animationDuration);
         }else{
             this.element.css("--animate-duration", 0);
         }
 
 
-        if (this.settings.outAnimation !== "no-animation" && !this.settings.animationEnabled) {
+        if (this.settings.outAnimation !== "no-animation" && getSetting("animationEnabled") == false) {
             this.element.addClass(`animate__animated ${this.settings.outAnimation}`);
         } else {
             this.element.css("opacity", "0.0");
