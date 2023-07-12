@@ -38,7 +38,7 @@
       "path": "lang/de.json"
     }
   ],
-  "url": "https://github.com/sanguaire/portrait-box",
-  "manifest": "https://github.com/sanguaire/portrait-box/releases/download/v0.4.9/module.json",
-  "download": "https://github.com/sanguaire/portrait-box/releases/download/v0.4.9/portrait-box.zip"
+  "url": "https://github.com/ferenos/portrait-box",
+  "manifest": "https://github.com/ferenos/portrait-box/releases/download/v0.4.9/module.json",
+  "download": "https://github.com/ferenos/portrait-box/releases/download/v0.4.9/portrait-box.zip"
 }
