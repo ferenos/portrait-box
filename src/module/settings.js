@@ -246,7 +246,7 @@ export const registerSettings = () => {
         name: game.i18n.localize("pb.animation-enabled"),
         scope: "client",
         config: true,   
-        requiresReload: false,
+        requiresReload: true,
         type: Boolean,
         default: true,
         config: true,

@@ -142,7 +142,7 @@ export class PortraitBox extends Application {
             this.element.css("--animate-duration", 0);
         }
 
-        if (this.settings.animation !== "no-animation" || !this.settings.animationEnabled) {
+        if (this.settings.animation !== "no-animation" || this.settings.animationEnabled) {
             this.element.addClass(`animate__animated ${this.settings.animation}`);
         } else {
             this.element.css("opacity", "1.0");
@@ -155,14 +155,14 @@ export class PortraitBox extends Application {
 
         this.element.attr("class", CONST.ANCHOR_CLASSES[this.settings.anchor])
 
-        if (this.settings.outAnimationDuration !== "" && getSetting("animationEnabled") == false) {
+        if (this.settings.outAnimationDuration !== "" && this.settings.animationEnabled) {
             this.element.css("--animate-duration", this.settings.animationDuration);
         }else{
             this.element.css("--animate-duration", 0);
         }
 
 
-        if (this.settings.outAnimation !== "no-animation" && getSetting("animationEnabled") == false) {
+        if (this.settings.outAnimation !== "no-animation" && this.settings.animationEnabled) {
             this.element.addClass(`animate__animated ${this.settings.outAnimation}`);
         } else {
             this.element.css("opacity", "0.0");
