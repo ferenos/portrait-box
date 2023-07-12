@@ -26,10 +26,6 @@ export class PortraitBox extends Application {
 
     }
 
-    activateListeners(html) {
-
-    }
-
     getData(options = {}) {
         return super.getData(options);
     }
@@ -137,11 +133,13 @@ export class PortraitBox extends Application {
 
         this.element.attr("class", CONST.ANCHOR_CLASSES[this.settings.anchor]);
 
-        if (this.settings.animationDuration !== "") {
+        if (this.settings.animationDuration !== "" && this.animationEnabled) {
             this.element.css("--animate-duration", this.settings.animationDuration);
+        }else{
+            this.element.css("--animate-duration", 0);
         }
 
-        if (this.settings.animation !== "no-animation") {
+        if (this.settings.animation !== "no-animation" || !this.settings.animationEnabled) {
             this.element.addClass(`animate__animated ${this.settings.animation}`);
         } else {
             this.element.css("opacity", "1.0");
@@ -154,11 +152,14 @@ export class PortraitBox extends Application {
 
         this.element.attr("class", CONST.ANCHOR_CLASSES[this.settings.anchor])
 
-        if (this.settings.outAnimationDuration !== "") {
-            this.element.css("--animate-duration", this.settings.outAnimationDuration);
+        if (this.settings.outAnimationDuration !== "" && this.animationEnabled) {
+            this.element.css("--animate-duration", this.settings.animationDuration);
+        }else{
+            this.element.css("--animate-duration", 0);
         }
 
-        if (this.settings.outAnimation !== "no-animation") {
+
+        if (this.settings.outAnimation !== "no-animation" && !this.settings.animationEnabled) {
             this.element.addClass(`animate__animated ${this.settings.outAnimation}`);
         } else {
             this.element.css("opacity", "0.0");

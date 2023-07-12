@@ -242,6 +242,16 @@ export const registerSettings = () => {
         requiresReload: true,
     });
 
+    game.settings.register(CONST.MODULE_NAME, "animationEnabled", {
+        name: game.i18n.localize("pb.animation-enabled"),
+        scope: "client",
+        config: true,   requiresReload: true,
+        type: Boolean,
+        default: true,
+        config: true,
+        requiresReload: true,
+    });
+
     game.settings.register(CONST.MODULE_NAME, "animationDuration", {
         name: game.i18n.localize("pb.animation-duration"),
         scope: "world",
