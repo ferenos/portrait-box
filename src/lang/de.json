@@ -4,6 +4,7 @@
     "anchor": "Anker",
     "anchor-hint": "Auf welche Position beziehen sich die Abstände.",
     "animation": "Anzeigeanimation",
+    "animation-enabled": "Animation aktiviert",
     "animation-duration": "Dauer der Anzeigeanimation",
     "animation-hint": "Animation, die beim einblenden verwendet wird. Danke an https://animate.style/",
     "background": "Hintergrundbild",

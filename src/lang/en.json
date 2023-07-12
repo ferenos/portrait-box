@@ -5,6 +5,7 @@
     "anchor-hint": "To which position do the distances refer.",
     "animation": "Show animation",
     "animation-duration": "Show animation duration",
+    "animation-enabled": "Enable animation",
     "animation-hint": "Animation that is used when fading in. Thanks to https://animate.style/",
     "background": "Background image",
     "background-hint": "",
