@@ -108,8 +108,6 @@ export class PortraitBox extends Application {
     }
 
     show = token => {
-        console.log(getSetting("animationEnabled"));
-
         if (!this.shouldShown(token))
             return;
 
