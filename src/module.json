@@ -2,16 +2,19 @@
   "id": "portrait-box",
   "title": "Portrait box",
   "description": "Show a portrait box on token hover",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "compatibility": {
-    "minimum": "10",
+    "minimum": "11",
     "verified": "10.291",
-    "maximum": "11"
+    "maximum": "12"
   },
   "authors": [
     {
       "name": "André Kurth",
       "discord": "Sanguaire#7321"
+    },
+    {
+      "name": "TheJamMan"
     }
   ],
   "relationships": {
