@@ -1,5 +1,20 @@
 import {CONST} from "./const.js";
 
+
+export const getExtraModules = () => {
+    if(game.settings.get(CONST.MODULE_NAME, "tokenVariant")){
+    game.settings.register(CONST.MODULE_NAME, "tokenVariant", {
+        name: game.i18n.localize("tokenVariant-enabled"),
+        scope: "world",
+        config: true,   
+        requiresReload: true,
+        type: Boolean,
+        default: false,
+        config: false,
+        });
+    }
+}
+
 export const registerSettings = () => {
     
     game.settings.register(CONST.MODULE_NAME, "animationEnabled", {
@@ -19,8 +34,7 @@ export const registerSettings = () => {
         type: Boolean,
         default: true,
         config: true,
-        requiresReload: true,
-
+        requiresReload: false,
     });
 
     game.settings.register(CONST.MODULE_NAME, "font", {
@@ -31,7 +45,6 @@ export const registerSettings = () => {
         default: "Signika",
         config: true,
         requiresReload: true,
-
     });
 
     game.settings.register(CONST.MODULE_NAME, "fontSize", {

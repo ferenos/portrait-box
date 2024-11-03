@@ -1,5 +1,6 @@
 import {CONST} from "./const.js";
 import {hoverObservable} from "./hooks.js";
+import { getExtraModules } from "./settings.js";
 import {getSetting} from "./utils.js";
 
 export class PortraitBox extends Application {
@@ -84,6 +85,7 @@ export class PortraitBox extends Application {
         this.settings.backgroundFilter = getSetting("backgroundFilter");
         this.settings.imageFilter = getSetting("imageFilter");
         this.settings.animationEnabled = getSetting("animationEnabled");
+        this.settings.tokenVariant = getExtraModules("tokenVariant");
     }
 
     #initCssVariables() {
@@ -146,6 +148,10 @@ export class PortraitBox extends Application {
             this.element.css("opacity", "1.0");
         }
     };
+
+    showTokenVariant = (token) => {
+
+    }
 
     hide = (token) => {
         if (!this.shouldShown(token))
